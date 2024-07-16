@@ -1,11 +1,20 @@
-import Alert from "./components/Alert";
+import Button from "./components/Buttons";
 
 function App() {
+  const handleClick = () => {
+    alert("Button clicked");
+  };
+
   return (
     <div>
-      <Alert>
-        Hello <span>World</span>
-      </Alert>
+      <Button label="Click Me" onClick={handleClick} />
+      <Button
+        label="Submit"
+        onClick={handleClick}
+        type="submit"
+        className="btn-primary"
+      />
+      <Button label="Disabled" onClick={handleClick} disabled={true} />
     </div>
   );
 }
